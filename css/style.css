@@ -1,0 +1,521 @@
+/*
+1- Commane styles
+2- Generale style
+3- Sections style
+    3.0 Header Sections
+    3.1 Home Sections
+    3.2 About Sections
+    3.3 Protfolio Sections
+    3.4 Service Sections
+    3.5 Prices Sections
+    3.6 Team Sections
+    3.7 Blog Sections
+    3.8 Contact Sections
+    3.9 Footer Sections
+
+*/
+
+/*1- Commone styles*/
+.overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+
+}
+
+/*end Commane styles*/
+
+/*2- General css style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3 {
+    font-family: monospace, sans-serif;
+}
+
+button {
+    font-family: inherit;
+}
+
+.pd-y {
+    padding: 120px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.Section-header-line {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: rgb(130, 130, 255);
+    margin: 0 auto 70px auto;
+}
+
+.left {
+    margin: 0 5%;
+}
+
+/* end General css style*/
+
+/*3- Sections style*/
+/*3.0 start header*/
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, .7);
+}
+
+.header .logo {
+    width: 40%;
+    float: left;
+}
+
+.header .logo img {
+    width: 20%;
+    margin-top: 15px;
+}
+
+.header .navbar-nav {
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .navbar-nav .nav-item {
+    display: inline-block;
+}
+
+.header .navbar-nav .nav-item .nav-link {
+    text-decoration: none;
+    padding: 30px 13px;
+    display: block;
+    color: white;
+}
+
+.header .navbar-nav .nav-item .nav-link.activ:after,
+.header .navbar-nav>.nav-item>.nav-link:after {
+    content: "";
+    height: 2px;
+    display: block;
+    margin: 2px 0;
+    background: rgb(130, 130, 255);
+    transition: width .5s;
+}
+
+.header .navbar-nav .nav-item .nav-link.activ:after {
+    width: 100%;
+}
+
+.header .navbar-nav>.nav-item>.nav-link:after {
+    width: 0;
+}
+
+.header .navbar-nav>.nav-item>.nav-link:hover:after {
+    width: 100%;
+}
+
+.header .dropdown {
+    position: relative;
+}
+
+.header .dropdoun-menu {
+    position: absolute;
+    background: rgb(130, 130, 255);
+    width: 150px;
+    text-align: center;
+    left: -43;
+    top: 70%;
+    transition: opacity .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header .dropdown:hover .dropdoun-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .dropdoun-menu .nav-item .nav-link {
+    padding: 10px 14px;
+    display: block;
+}
+
+/*end header*/
+/*start Home*/
+.home {
+    height: 100vh;
+    background: url('/images/background/background1.webp')center;
+    background-size: cover;
+    position: relative;
+}
+
+.home-content {
+    text-align: center;
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-title {
+    color: white;
+    font-size: 50px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.home-body {
+    font-size: 17px;
+    color: white;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+.btn {
+    margin: 20px 5px;
+    min-width: 130px;
+    /* height: 40;*/
+    padding: 12px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: opacity .5s;
+}
+
+.btn-start,
+.btn-learn {
+    background: white;
+    border: none;
+    text-transform: capitalize;
+}
+
+.btn-learn {
+    background: rgb(130, 130, 255);
+    color: white;
+
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+/*end Home*/
+/*about-Us*/
+.about-content {
+    overflow: hidden;
+}
+
+.about-item {
+    padding: 40px 5px;
+    float: left;
+    width: 30%;
+    text-align: center;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-item:after {
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, .7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: width .5s;
+}
+
+.about-item:hover:after {
+    width: 100%;
+}
+
+.about-content .icon {
+    margin-bottom: 20px;
+    color: rgb(130, 130, 255);
+
+}
+
+.about-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    transition: color .5s;
+}
+
+.about-item:hover .about-title {
+    color: white;
+}
+
+.about-descr {
+    color: rgb(255, 255, 255);
+    line-height: 1.6;
+    margin-bottom: 20px
+}
+
+.about-link {
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: rgb(130, 130, 255);
+}
+
+/*end about-us*/
+/*start portfplio*/
+.portfplio {
+    background: silver;
+}
+
+.protfolio-content {
+    overflow: hidden;
+}
+
+.protfolio-item {
+    width: 30%;
+    float: left;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 20px;
+}
+
+.protfolio-item:hover .protfolio-item-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.protfolio-item img {
+    width: 100%;
+    background-size: cover;
+}
+
+.protfolio-item-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: opacity .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.protfolio-item-info {
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.info-categ {
+    color: rgb(130, 130, 255);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    top: 15px;
+    transition: top .5s;
+    transition-delay: .1s;
+}
+
+.info-title {
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 18px;
+    position: relative;
+    top: 15px;
+    transition: top .5s;
+    transition-delay: .2s;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: rgb(130, 130, 255);
+    line-height: 40px;
+    position: relative;
+    top: 15px;
+    transition: top .5s;
+    transition-delay: .3s;
+}
+
+.protfolio-item:hover .info-categ,
+.protfolio-item:hover .info-title,
+.protfolio-item:hover .info-icon {
+    top: 0;
+}
+
+
+/*end portfplio*/
+/*offer*/
+.offer-content {
+    overflow: hidden;
+}
+
+.offer-item {
+    width: 30%;
+    float: left;
+    position: relative;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 25px 5px 40px 60px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.offer-item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+    transition: height .5s;
+    z-index: -1;
+}
+
+.offer-item:hover:after {
+    height: 100%;
+}
+
+.offer-icon {
+    position: absolute;
+    left: 18px;
+    top: 25px;
+    color: rgb(130, 130, 255);
+}
+
+.offer-title {
+    margin-bottom: 15px;
+    transition: color .5s;
+    text-transform: capitalize;
+}
+
+.offer-dic {
+    line-height: 1.6;
+    color: rgb(124, 124, 124);
+}
+
+.offer-item:hover .offer-title {
+    color: white
+}
+
+/*end offer*/
+/*start serveses*/
+.serveses {
+    background: silver;
+}
+
+.servses-content {
+    overflow: hidden;
+}
+
+.servses-item {
+    float: left;
+    width: 50%;
+}
+
+.servses-item .section-header {
+    text-align: left;
+}
+
+.servses-item .Section-header-line {
+    margin: 0 0 55px 0;
+}
+
+.servses-item-desc {
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.servses-item-list {
+    list-style: none;
+}
+
+.servses-item-list li {
+    padding-left: 2px;
+    color: rgb(240, 240, 240);
+    margin-bottom: 10px;
+}
+
+.servses-item-list li i {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50%;
+    color: rgb(130, 130, 255);
+    margin-right: 5px;
+}
+
+.servses-item-img {
+    width: 100%;
+}
+
+.servses-item-list2 {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.servses-item-list2 li {
+    width: 15px;
+    height: 15px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 10px;
+
+}
+
+.servses-item-list2 li.activ {
+    background: rgb(130, 130, 255);
+}
+
+.servses-item-list2 li:hover {
+    background: rgb(130, 130, 255);
+}
+
+/*end serveses*/
